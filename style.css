@@ -38,7 +38,7 @@ html {
     text-align: center;
     transition: .5s ease;
     opacity: 0.5;
-    background-color: black;
+    /* background-color: black; */
 }
 }
 
@@ -98,6 +98,9 @@ html {
     transition: .5s ease;
     opacity: 0.5;
     background-color: black;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .footer {
