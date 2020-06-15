@@ -1,4 +1,14 @@
 /*THIS CODE MAKES THE REQUEST*/
+
+const characterSelect = document.getElementById('character-select');
+// console.log(app);
+
+// const container = document.createElement('div');
+// container.setAttribute('class', 'container');
+
+// const sidebar = document.getElementById('sidebar');
+
+// app.appendChild(container);
 var request = new XMLHttpRequest()
 
 request.open('GET', 'http://localhost:3000/character', true)
@@ -9,33 +19,35 @@ request.onload = function() {
 
     labels = characterLabels.sort();
 
+    //FOREACH LOOP TO CREATE A CARD FOR EACH CHARACTER
     characterLabels.forEach( label => {
 
-        //Create div element for card
+        //CREATE DIV FOR CARD
         const card = document.createElement('div');
         card.setAttribute('class', 'card');
         card.setAttribute('id', label);
 
-        //Create image element for card
-        const thumbnail = document.createElement('img');
+        //CREATE IMAGE FOR CARD
+        const thumbnail = document.createElement('img');    
         thumbnail.setAttribute('src', 'images/thumbnails/'+label+'.jpg');
 
-        //create div element for name
+        //CREATE DIV FOR NAME
         const characterName = document.createElement('div');
         characterName.setAttribute('class', 'card-name');
-        // characterName.setAttribute('id', 'card-'+name);
         characterName.textContent = (label);
 
-        app.appendChild(card);
+        //STRUCTURE ELEMENTS FOR CARD
+        characterSelect.appendChild(card);
         card.appendChild(thumbnail);
         card.appendChild(characterName);
-        // console.log(name);
+        
+    });
 
         //create div to show text for testing
-        const someText = document.createElement('div');
-        someText.textContent = ('text');
-        sidebar.appendChild(someText);
-    });
+
+    const someText = document.createElement('div');
+    someText.textContent = ('text');
+    sidebar.appendChild(someText);
 }
 
 //Send Request
