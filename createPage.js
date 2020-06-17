@@ -1,16 +1,23 @@
 /*THIS CODE MAKES THE REQUEST*/
-let request = new XMLHttpRequest()
+
+const characterSelect = document.getElementById('character-select');
+// console.log(app);
+
+// const container = document.createElement('div');
+// container.setAttribute('class', 'container');
+
+// const sidebar = document.getElementById('sidebar');
+
+// app.appendChild(container);
+var request = new XMLHttpRequest()
 
 request.open('GET', 'http://192.168.1.25:3000/character', true)
 
-request.onload = async function() {
-    
-    let data = JSON.parse(this.response)
-
+request.onload = function() {
+    var data = JSON.parse(this.response)
     let characterLabels = data.map ( character => character.label)
-    labels = characterLabels.sort();
 
-    const characterSelect = document.getElementById('character-select');
+    labels = characterLabels.sort();
 
     //FOREACH LOOP TO CREATE A CARD FOR EACH CHARACTER
     characterLabels.forEach( label => {
@@ -20,7 +27,7 @@ request.onload = async function() {
         card.setAttribute('class', 'card');
         card.setAttribute('id', label);
 
-        //CREATE IMAGE FOR CARD 
+        //CREATE IMAGE FOR CARD
         const thumbnail = document.createElement('img');    
         thumbnail.setAttribute('src', 'images/thumbnails/'+label+'.jpg');
 
@@ -33,19 +40,15 @@ request.onload = async function() {
         characterSelect.appendChild(card);
         card.appendChild(thumbnail);
         card.appendChild(characterName);
-
-        // document.getElementById(label).addEventListener("click", function(){
-        //     window.alert(`Hit ${label}`); 
-        // });
-
-        document.getElementById(label).onclick = function () {
-            location.href = "character/akuma.html";
-        };
         
     });
+
+        //create div to show text for testing
+
+    const someText = document.createElement('div');
+    someText.textContent = ('text');
+    sidebar.appendChild(someText);
 }
+
 //Send Request
 request.send()
-
-
-

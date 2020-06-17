@@ -1,22 +1,29 @@
 // Event listener when clicking on character card.
-document.querySelector('.card').addEventListener("click", function(){
-    window.alert('Hit');
-});
+
+// const name = document.querySelector('#id').getAttribute('id')
+
+// const test = document.querySelector('#Akuma')
+// console.log(test)
+
+// const test = document.querySelector('#Akuma')
+// console.log(test)
+
+
 
 //Event listener when closing the character modal.
 // document.querySelector('.close').addEventListener('click', function(){
 //     document.querySelector('.character-info-window-overlay').style.display='none';
 // });
 
-const app = document.getElementById('character-select');
-console.log(app);
+// const app = document.getElementById('character-select');
+// console.log(app);
 
-const container = document.createElement('div');
-container.setAttribute('class', 'container');
+// const container = document.createElement('div');
+// container.setAttribute('class', 'container');
 
-const sidebar = document.getElementById('sidebar');
+// const sidebar = document.getElementById('sidebar');
 
-app.appendChild(container);
+// app.appendChild(container);
 
 // /*THIS CODE MAKES THE REQUEST*/
 // var request = new XMLHttpRequest()

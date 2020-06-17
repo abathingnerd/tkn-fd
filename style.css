@@ -5,11 +5,10 @@ html {
 .wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 200px 1fr 1fr 200px;
+    grid-template-rows: 180px 1fr 180px;
     grid-template-areas: 
         'header header'
         'content content'
-        'sidebar sidebar'
         'footer footer';
     grid-gap: 1px;
 }
@@ -18,20 +17,18 @@ html {
     .wrapper {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: 200 repeat(3, 1fr);
+        grid-template-rows: 180px repeat(3, 1fr);
         grid-template-areas: 
-            'sidebar sidebar header header'
-            'sidebar sidebar content content'
-            'sidebar sidebar content content'
-            'sidebar sidebar footer footer';
+            'header header header header'
+            'content content content content'
+            'content content content content'
+            'footer footer footer footer';
         grid-gap: 1px;
     }
 
     .card-name {
     font-family: 'Roboto';
-    font-weight: bold;
-    font-style: italic;
-    font-size: 16px;
+    font-size: 20px;
     text-transform: uppercase;
     color: white;
     margin-top: -20px;
@@ -45,35 +42,39 @@ html {
 .header {
     grid-area: header;
     font-family: 'Bebas Neue', cursive;
-    font-size: 120px;
+    font-size: 100px;
     font-weight: bold;
-    /* border: solid black; */
+    border: solid black;
     text-align: center;
     padding-top: 40px;
+    /* margin-bottom: 100px; */
+
 }
 
 .subheader {
     font-family: 'Lato', sans-serif;
-    font-size: 16px;
-    letter-spacing: 16px;
+    font-size: 15%;
+    letter-spacing: 8px;
     text-align: center;
-    margin-top: -20px;
-    padding-left: 1em;
+    margin-top: -15px;
+    padding-left: 10px;
+    /* padding-bottom: 500px; */
 }
 
 .character-select {
     grid-area: content;
+    /* max-height: 440px;  */
     display: flex;
     justify-content: center;
     /* border: solid black; */
     flex-wrap: wrap;
+    /* padding-top: 15px; */
 }
 
 .card {
-    width:15%;
-    min-width: 85px;
-    padding: 5px 5px 10px 5px;
-
+    width: 5.6%;
+    min-width: 75px;
+    padding: 8px 5px 8px 5px;
     cursor: pointer;
 }
 
@@ -83,31 +84,34 @@ html {
   }
 
 .card:hover .card-name {
-    transform: scale(1);
-    opacity: 1;
+    transform: scale(1.1);
+    background-color: black;
+    opacity: .9;
 }
 
 .card-name {
     font-family: 'Roboto';
     font-weight: bold;
-    font-style: italic;
-    font-size: 16px;
+    /* font-style: italic; */
+    font-size: 80%;
+    /* font-size: 12px; */
     text-transform: uppercase;
     color: white;
-    margin-top: -28px;
-    margin-left: 5px;
+    margin-top: -23px;
+    /* margin-left: 5px; */
     text-align: left;
     transition: .5s ease;
-    opacity: 0.5;
-    /* background-color: black; */
+    opacity: 0.8;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+    padding-left: 5px
 }
 
 .footer {
     grid-area: footer;
-    /* border: solid black; */
+    padding-top: 150px;
+    border: solid black;
     text-align: center;
 }
 
@@ -156,7 +160,7 @@ h2{
 .fl-table {
     border-radius: 5px;
     font-size: 12px;
-    /* font-weight: normal; */
+    font-weight: normal;
     border: none;
     border-collapse: collapse;
     width: 100%;
