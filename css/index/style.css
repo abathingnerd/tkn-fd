@@ -1,0 +1,102 @@
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 200px 1fr 200px;
+  grid-template-areas:
+    "header"
+    "content"
+    "footer";
+  grid-gap: 1px;
+}
+
+.header {
+  grid-area: header;
+  font-family: "Bebas Neue", cursive;
+  font-size: 120px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 40px;
+  /* border: solid black; */
+}
+
+.subheader {
+  font-family: "Lato", sans-serif;
+  font-size: 15%;
+  letter-spacing: 9px;
+  text-align: center;
+  margin-top: -15px;
+  padding-left: 10px;
+  /* border: solid black; */
+}
+
+.character-select {
+  grid-area: content;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  /* border: solid black; */
+}
+
+.card {
+  width: 5.6%;
+  min-width: 75px;
+  padding: 8px 5px 8px 5px;
+  cursor: pointer;
+}
+
+.card:hover img {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.card:hover .card-name {
+  transform: scale(1.1);
+  background-color: black;
+  opacity: 0.9;
+}
+
+.card-name {
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 80%;
+  text-transform: uppercase;
+  color: white;
+  margin-top: -23px;
+  text-align: left;
+  transition: 0.5s ease;
+  opacity: 0.8;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  padding-left: 5px;
+}
+
+.footer {
+  grid-area: footer;
+  padding-top: 150px;
+  text-align: center;
+  /* border: solid black; */
+}
+
+.sidebar {
+  grid-area: sidebar;
+  text-align: center;
+}
+
+img {
+  width: 100%;
+  opacity: 0.8;
+  box-shadow: 3px 3px 10px 0px;
+  transition: 0.5s ease;
+}
+
+@media (max-width: 500px) {
+  .header {
+    font-family: "Bebas Neue", cursive;
+    font-size: 100px;
+  }
+}
