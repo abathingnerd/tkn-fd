@@ -1,7 +1,7 @@
 /*THIS CODE MAKES THE REQUEST*/
 let request = new XMLHttpRequest();
 
-request.open("GET", "http://192.168.1.25:3000/character", true);
+request.open("GET", "http://192.168.1.15:3000/character", true);
 
 request.onload = function () {
   let data = JSON.parse(this.response);
@@ -38,7 +38,7 @@ request.onload = function () {
 
     //CLICKING CHARACTER GOES TO THE RIGHT PAGE
     document.getElementById(name).onclick = function () {
-      location.href = `${name}.html`.toLowerCase();
+      location.href = `/character/${name}.html`.toLowerCase();
     };
   });
 };

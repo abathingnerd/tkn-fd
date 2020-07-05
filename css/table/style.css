@@ -1,0 +1,124 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: 20% 1fr 1fr 20%;
+  grid-template-rows: 100px 1fr 80px;
+  grid-template-areas:
+    ". header header ."
+    ". table table ."
+    ". footer footer .";
+  grid-gap: 5px;
+}
+
+#header {
+  grid-area: header;
+  font-family: "Bebas Neue", cursive;
+  font-size: 100px;
+  font-weight: 600;
+  color: white;
+  padding-top: 8px;
+  padding-left: 10px;
+  background-position: right;
+  background-size: cover;
+}
+
+table {
+  grid-area: table;
+  max-width: 100%;
+  font-family: "Roboto", sans-serif;
+}
+
+th {
+  font-weight: 500;
+  padding: 5px;
+  text-align: left;
+  font-size: 14px;
+  color: white;
+  background-color: black;
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+td {
+  padding: 10px;
+  font-weight: 400;
+  text-align: left;
+  vertical-align: middle;
+  font-size: 13px;
+  color: black;
+  width: auto;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+@media (max-width: 1400px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 20% 1fr 20%;
+    grid-template-rows: 70px 1fr 80px;
+    grid-template-areas:
+      ". header ."
+      ". table ."
+      ". footer .";
+    grid-gap: 5px;
+  }
+  #header {
+    grid-area: header;
+    font-family: "Bebas Neue", cursive;
+    font-size: 60px;
+    font-weight: 500;
+    padding: 0px;
+    padding-left: 5px;
+    text-align: left;
+    color: white;
+    background-position: right;
+    background-size: cover;
+  }
+}
+
+@media (max-width: 800px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 70px 1fr 80px;
+    grid-template-areas:
+      "header"
+      "table"
+      "footer";
+    grid-gap: 5px;
+    /* border: solid 1px black; */
+  }
+  #header {
+    grid-area: header;
+    font-family: "Bebas Neue", cursive;
+    font-size: 60px;
+    font-weight: 500;
+    padding: 0px;
+    padding-left: 5px;
+    text-align: left;
+    color: white;
+    background-position: right;
+    /* background-size: 250%; */
+    background-size: cover;
+  }
+  #hit-range,
+  tr td:nth-child(2) {
+    display: none;
+    visibility: hidden;
+  }
+  #damage,
+  tr td:nth-child(3) {
+    display: none;
+    visibility: hidden;
+  }
+  #counter-hit,
+  tr td:nth-child(7) {
+    display: none;
+    visibility: hidden;
+  }
+  #notes,
+  tr td:nth-child(8) {
+    display: none;
+    visibility: hidden;
+  }
+}
