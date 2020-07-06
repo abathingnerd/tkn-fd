@@ -11,7 +11,11 @@ function getCharacterName() {
 
 let characterName = getCharacterName();
 
-request.open("GET", `//tkn-api.herokuapp.com/character/${characterName}`, true);
+request.open(
+  "GET",
+  `https://tkn-api.herokuapp.com/character/${characterName}`,
+  true
+);
 
 request.onload = function () {
   let data = JSON.parse(this.response);
