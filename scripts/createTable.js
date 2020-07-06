@@ -1,5 +1,5 @@
 /*THIS CODE MAKES THE REQUEST*/
-let request = new XMLHttpsRequest();
+let request = new XMLHttpRequest();
 
 function getCharacterName() {
   let fullPath = window.location.pathname;
