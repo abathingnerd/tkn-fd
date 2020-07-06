@@ -1,7 +1,7 @@
 /*THIS CODE MAKES THE REQUEST*/
 let request = new XMLHttpRequest();
 
-request.open("GET", "http://192.168.1.15:3000/character", true);
+request.open("GET", "https://tkn-api.herokuapp.com/character", true);
 
 request.onload = function () {
   let data = JSON.parse(this.response);
