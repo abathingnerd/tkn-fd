@@ -13,7 +13,7 @@ let characterName = getCharacterName();
 
 request.open(
   "GET",
-  `http://192.168.1.15:3000/character/${characterName}`,
+  `https://tkn-api.herokuapp.com/character/${characterName}`,
   true
 );
 
