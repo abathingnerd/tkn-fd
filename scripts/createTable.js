@@ -58,7 +58,7 @@ request.onload = function () {
     "Startup",
     "Hit",
     "Block",
-    "Counter",
+    "Counter Hit",
     "Notes",
   ];
 
