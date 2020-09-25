@@ -6,5 +6,8 @@
 		{
 			"path": "../tkn-api"
 		}
-	]
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "tkn-fd"
+	}
 }

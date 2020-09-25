@@ -1,22 +1,21 @@
 .wrapper {
   display: grid;
-  grid-template-columns: 20% 1fr 1fr 20%;
+  grid-template-columns: 1fr 800px 1fr;
   grid-template-rows: 100px 1fr 80px;
   grid-template-areas:
-    ". header header ."
-    ". table table ."
-    ". footer footer .";
+    ". header ."
+    ". table ."
+    ". footer .";
   grid-gap: 5px;
 }
 
 #header {
   grid-area: header;
-  font-family: "Bebas Neue", cursive;
-  font-size: 100px;
+  font-family: 'Bebas Neue', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 50px;
   font-weight: 600;
+  padding-left: 8px;
   color: white;
-  padding-top: 8px;
-  padding-left: 10px;
   background-position: right;
   background-size: cover;
 }
@@ -24,18 +23,22 @@
 table {
   grid-area: table;
   max-width: 100%;
-  font-family: "Roboto", sans-serif;
+  font-family: "Lato", sans-serif;
+  /* font-weight: 100; */
+  /* border: solid black 1px; */
 }
 
 th {
-  font-weight: 500;
+  /* font-weight: 500; */
   padding: 5px;
   text-align: left;
   font-size: 14px;
   color: white;
-  background-color: black;
+  background-color: #808080;
   text-transform: uppercase;
-  opacity: 0.5;
+  /* opacity: 0.5; */
+  position: sticky;
+  top: 0; /* Don't forget this, required for the stickiness */
 }
 td {
   padding: 10px;
@@ -54,8 +57,8 @@ tr:nth-child(even) {
 @media (max-width: 1400px) {
   .wrapper {
     display: grid;
-    grid-template-columns: 20% 1fr 20%;
-    grid-template-rows: 70px 1fr 80px;
+    grid-template-columns: 1fr 800px 1fr;
+    grid-template-rows: 100px 1fr 80px;
     grid-template-areas:
       ". header ."
       ". table ."
@@ -65,10 +68,9 @@ tr:nth-child(even) {
   #header {
     grid-area: header;
     font-family: "Bebas Neue", cursive;
-    font-size: 60px;
+    font-size: 50px;
     font-weight: 600;
-    padding: 0px;
-    padding-left: 5px;
+    padding-left: 8px;
     text-align: left;
     color: white;
     background-position: right;
@@ -79,8 +81,8 @@ tr:nth-child(even) {
 @media (max-width: 800px) {
   .wrapper {
     display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 70px 1fr 80px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 1fr 80px;
     grid-template-areas:
       "header"
       "table"
@@ -91,10 +93,9 @@ tr:nth-child(even) {
   #header {
     grid-area: header;
     font-family: "Bebas Neue", cursive;
-    font-size: 60px;
+    font-size: 50px;
     font-weight: 600;
-    padding: 0px;
-    padding-left: 5px;
+    padding-left: 8px;
     text-align: left;
     color: white;
     background-position: right;
@@ -108,11 +109,6 @@ tr:nth-child(even) {
   }
   #damage,
   tr td:nth-child(3) {
-    display: none;
-    visibility: hidden;
-  }
-  #counter-hit,
-  tr td:nth-child(7) {
     display: none;
     visibility: hidden;
   }

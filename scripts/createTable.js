@@ -29,7 +29,7 @@ request.onload = function () {
 
   //CREATES BANNER IMAGE
   let header = document.getElementById("header");
-  header.innerHTML = characterName.split("-").join(" ");
+  header.innerHTML = characterName.split("-").join(" ").toUpperCase();
   header.setAttribute(
     "style",
     `background-image: url("../images/banner/${characterName}.jpg")`
@@ -58,7 +58,7 @@ request.onload = function () {
     "Startup",
     "Hit",
     "Block",
-    "Counter Hit",
+    "Counter",
     "Notes",
   ];
 
