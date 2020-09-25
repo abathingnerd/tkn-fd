@@ -103,16 +103,16 @@ tr:nth-child(even) {
   }
   table {
     grid-area: table;
-    max-width: 10px;
+    max-width: 100%;
     font-family: "Lato", sans-serif;
     /* font-weight: 100; */
     /* border: solid black 1px; */
   }
-  #notes,
+  /* #notes,
   tr td:nth-child(8) {
     display: none;
     visibility: hidden;
-  }
+  } */
 }
 
 @media (max-width: 640px) {
