@@ -97,6 +97,6 @@ img {
 @media (max-width: 500px) {
   .header {
     font-family: "Bebas Neue", cursive;
-    /* font-size: 100px; */
+    font-size: 100px;
   }
 }

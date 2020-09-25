@@ -29,16 +29,15 @@ table {
 }
 
 th {
-  /* font-weight: 500; */
+  font-weight: 500;
   padding: 5px;
   text-align: left;
   font-size: 14px;
   color: white;
   background-color: #808080;
   text-transform: uppercase;
-  /* opacity: 0.5; */
   position: sticky;
-  top: 0; /* Don't forget this, required for the stickiness */
+  top: 0;
 }
 td {
   padding: 10px;
@@ -87,7 +86,7 @@ tr:nth-child(even) {
       "header"
       "table"
       "footer";
-    grid-gap: 5px;
+    /* grid-gap: 5px; */
     /* border: solid 1px black; */
   }
   #header {
@@ -102,13 +101,63 @@ tr:nth-child(even) {
     /* background-size: 250%; */
     background-size: cover;
   }
-  #hit-range,
+  table {
+    grid-area: table;
+    max-width: 10px;
+    font-family: "Lato", sans-serif;
+    /* font-weight: 100; */
+    /* border: solid black 1px; */
+  }
+  #notes,
+  tr td:nth-child(8) {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (max-width: 640px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 1fr 80px;
+    grid-template-areas:
+      "header"
+      "table"
+      "footer";
+    /* grid-gap: 5px; */
+    /* border: solid 1px black; */
+  }
+  #header {
+    grid-area: header;
+    font-family: "Bebas Neue", cursive;
+    font-size: 50px;
+    font-weight: 600;
+    padding-left: 8px;
+    text-align: left;
+    color: white;
+    background-position: right;
+    /* background-size: 250%; */
+    background-size: cover;
+  }
+  table {
+    grid-area: table;
+    max-width: 100%;
+    font-family: "Lato", sans-serif;
+    /* font-weight: 100; */
+    /* border: solid black 1px; */
+  }
+  #range,
   tr td:nth-child(2) {
     display: none;
     visibility: hidden;
   }
   #damage,
   tr td:nth-child(3) {
+    display: none;
+    visibility: hidden;
+  }
+  #counter,
+  tr td:nth-child(7) {
     display: none;
     visibility: hidden;
   }

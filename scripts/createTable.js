@@ -53,12 +53,12 @@ request.onload = function () {
 
   const HEADERS = [
     "Command",
-    "Hit Range",
+    "Range",
     "Damage",
     "Startup",
     "Hit",
     "Block",
-    "Counter Hit",
+    "Counter",
     "Notes",
   ];
 
